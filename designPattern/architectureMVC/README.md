@@ -137,3 +137,13 @@ Le modèle contient les informations sur l’état.
 La vue contient les éléments qui interagissent avec l’utilisateur.
 
 Le contrôleur s’assure que la séquence des étapes se déroule correctement.
+
+Le modèle est constitué des éléments avec lesquels vous avez des interactions. Ceux-ci contiennent les informations sur l’état du système.
+
+Pour trouver vos objets de modèle, consultez la liste des prérequis.
+
+Dans notre application, nous avons défini que :
+
+○      Le modèle est constitué d’un joueur, d’une main, d’une carte à jouer, d’un jeu, d’un rang et d’une couleur.
+
+○      Un joueur possède une main. Une main contient des cartes à jouer. Un jeu contient des cartes à jouer.
