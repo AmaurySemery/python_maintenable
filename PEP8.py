@@ -42,3 +42,72 @@ def foo(arg):
 def foo(arg):
 # Commentaire mal indenté
     pass
+
+# Bon code, selon la PEP 8.
+def protect_animals(animals, sanctuary="little farm", max_places=4):
+    """Place les animaux donnés dans un sanctuaire."""
+    is_little = "little" in sanctuary
+ 
+    if max_places < 5 or is_little:
+        print("C'est petit, mais c'est mieux que rien !")
+ 
+    protected = animals[:max_places]
+    print(f"Nous avons protégés ces animaux : {protected}")
+ 
+animals = ["cochon", "poule", "cerf", "lapin", "chien"]
+protect_animals(animals)
+
+# Mauvais code, selon la PEP 8.
+def protect_animals(animals,sanctuary = "little farm",max_places = 4):
+    is_little="little" in sanctuary
+ 
+    if max_places<5 or(is_little):
+        print( "C'est petit, mais c'est mieux que rien !" )
+ 
+    protected=animals[ : max_places]
+    print( f"Nous avons protégés ces animaux : { protected }" )
+ 
+animals = [ "cochon","poule","cerf","lapin","chien" ]
+protect_animals( animals )
+
+"""
+Mettez un seul espace autour des opérateurs d’affectation (  is_little = "little" in sanctuary  ) et des opérateurs logiques (  max_places  < 5  ). La seule exception intervient lorsque l’on fixe des valeurs par défaut en paramètres de fonctions et méthodes, telles que  max_places=4  .
+
+Ne laissez jamais d’espaces tout de suite à l’intérieur de parenthèses ou de crochets. Écrivez  (expression)  et  [0]  , pas  ( expression )   ou  [ 0 ]  .
+
+Ne laissez pas de blanc entre une fonction, comme  print()  , et ses arguments.
+
+Laissez un espace entre  if  et toute parenthèse. La même règle s’applique à  for  . Ceci vise à être cohérent avec les situations où il n’y a pas de parenthèses.
+"""
+
+def my_function(parameter_number_1):
+    print("bla")
+
+# Aligne les paramètres sur la verticale
+def function_with_a_rather_long_name(parameter_number_1, parameter_number_2,
+                                     parameter_number_3):
+    my_function(parameter_number_1)
+    return parameter_number_2
+
+# Même chose, mais avec un paramètre par ligne
+def function_with_a_rather_long_name(parameter_number_1,
+                                     parameter_number_2,
+                                     parameter_number_3):
+    my_function(parameter_number_1)
+    return parameter_number_2
+
+# Un paramètre par ligne, et la parenthèse au même niveau d’indentation que la fonction
+def function_with_a_rather_long_name(
+    parameter_number_1,
+    parameter_number_2,
+    Parameter_number_3
+):
+    my_function(parameter_number_1)
+    return parameter_number_2
+
+super_long_password = (
+    "erfzfefrzvterbytnrezrtvbytyruetrgtrth"
+    "zeergvzreafz'((-'eg'((yhvgbrz'trvytrh"
+    "zerbetrtzbrtyezegbyebzrtbrebrtberbtrg"
+    "zevrebtniukoy;i;yu,yt,trntehtrgegretr"
+)
