@@ -30,8 +30,20 @@ class Controller:
             self.players.append(player)
 
     def evaluate_game(self):
-        """Evaluate the game."""
-        return self.checker_strategy.check(self.players)
+        """Evaluate the best player."""
+        last_player = self.players[0]
+        best_candidate = self.players[0]
+
+        for player in self.players[1:]:
+            player_card = player.hand[0]
+            last_player_card = last_player.hand[0]
+
+            if player_card > last_player_card:
+                best_candidate = player
+
+            last_player = player
+
+        return best_candidate.name
 
     def rebuild_deck(self):
         """Rebuild the deck."""

@@ -147,3 +147,11 @@ Dans notre application, nous avons défini que :
 ○      Le modèle est constitué d’un joueur, d’une main, d’une carte à jouer, d’un jeu, d’un rang et d’une couleur.
 
 ○      Un joueur possède une main. Une main contient des cartes à jouer. Un jeu contient des cartes à jouer.
+
+Le contrôleur est responsable du séquençage du cas d’usage, et valide les événements envoyés par la vue.
+
+La vue est responsable de la présentation du modèle, de l’information de la séquence, et de la récolte des inputs de l’utilisateur.
+
+Les responsabilités du contrôleur sont définies en regardant les étapes de l’application. Les responsabilités de la vue sont définies par ce que le contrôleur doit montrer à l’utilisateur.
+
+https://folk.universitetetioslo.no/trygver/index.html
