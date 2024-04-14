@@ -111,3 +111,19 @@ super_long_password = (
     "zerbetrtzbrtyezegbyebzrtbrebrtberbtrg"
     "zevrebtniukoy;i;yu,yt,trntehtrgegretr"
 )
+
+def less_confusing_division(top, bottom):
+    """Divise "top" par "bottom"."""
+    if bottom == 0 or top == 0:
+        return None
+ 
+    if top % bottom != 0:
+        return None
+ 
+    return top / bottom
+
+phone_number = "01234567890"
+if phone_number.endswith("7890"):
+    print("Verily!")
+if "345" in phone_number:
+    print("Affirmative!")
